@@ -1,6 +1,5 @@
 '''Function to extract TSS locations from GTF file, modified from GTFtools'''
 def get_tss_region(GTFfile,tss_bed_file,chroms=[f'chr{x}' for x in range(1,23)]+['chrX','chrY','chrM']):
-    TSSbed=[]
     with open(GTFfile,'r') as fi:
         with open(tss_bed_file,'w') as fo:
             fo.write('gene_id,gene_name,chr,strand,TSS\n') 
